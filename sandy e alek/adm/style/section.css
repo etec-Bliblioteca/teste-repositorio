@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+
+section{
+    /* background-color: red; */
+    /* border: 1px solid black; */
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px 0px 0px 0px;
+}
+
+article{
+    width: 900px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+section.catalogo{
+    width: 100%;
+    /* background-color: red; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section.catalogo > .card{
+    width: 150px;
+    height: 200px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+/* CELULAR */
+@media screen and (width<=680px) {
+    article{
+        width: 95%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+}
+/* TABLET OU CELULAR */
+@media screen and (min-width:600px) {
+    article{
+        height: 300px;
+    }
+    
+    section{
+        padding-left: 180px;
+    }
+
+    section.catalogo{
+        padding-left: 180px;
+    }
+}
+
+/* COMPUTADOR */
+
+@media screen and (width>=900px) {
+    section.catalogo{
+        padding-left: 180px;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* background-color: red; */
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    section.catalogo > .card{
+        width: 250px;
+        height: 350px;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+
+    article{
+        width: 900px;
+        height: fit-content;
+        border: 1px solid black;
+        /* overflow: hidden; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px 10px;
+    }
+}
