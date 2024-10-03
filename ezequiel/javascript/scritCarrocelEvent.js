@@ -1,4 +1,4 @@
-let slideIdx = 1;
+let slideIdx = 0;
 showSlide(slideIdx);
 
 function pluSlide(n){
@@ -20,7 +20,26 @@ function showSlide(n){
     }
     for(i = 0; i < dot.length; i++){
         dot[i].className = dot[i].className.replace(" active", "");
-    }
+    };
     slide[slideIdx-1].style.display = "block";
     dot[slideIdx - 1].className += " active";
+}
+
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide-cont");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIdx++;
+  if (slideIdx > slides.length) {slideIdx = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIdx-1].style.display = "block";  
+  dots[slideIdx-1].className += " active";
+  setTimeout(showSlides, 7000);
 }
