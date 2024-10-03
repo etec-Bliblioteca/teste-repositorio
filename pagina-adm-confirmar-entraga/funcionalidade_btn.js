@@ -14,8 +14,9 @@ function construir(quant){
 
         <div class="descricao">
             <h3>
-                nome do aluno
+         Nome do aluno
             </h3>
+            
             <p>rm: xxxx <br>
             Turma: 2º info manha<br>
             Data de entrega: xx/xx/xxxx</p>
@@ -29,11 +30,11 @@ function construir(quant){
         <div class="bloco_btn">
 
             <button class="btn_cancelar">
-                cancelar
+                X
             </button>
 
-            <button class="btn_confirmar">
-                confirmar 
+            <button class="btn_renovar">
+                Renovar
             </button>
         </div>
     </section>
@@ -42,4 +43,4 @@ function construir(quant){
 }
 
 // defina a quantidade de pessoas que estão com livros agendados
-construir(3);
+construir(1);
