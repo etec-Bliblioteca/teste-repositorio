@@ -1,6 +1,6 @@
 const containerCard = document.querySelector('#cards');
-const btnPrev = document.querySelector('.prev');
-const btnNext = document.querySelector('.next');
+const btnPrev = document.querySelector('.btnPrev');
+const btnNext = document.querySelector('.btnNext');
 const card = [...document.querySelectorAll('.card')];
 
 id=1;
@@ -8,7 +8,7 @@ id=1;
 function construir() {
     containerCard.innerHTML += `
         <div class="card">
-            <div class="livro"></div>
+            <div class="livro">${id}</div>
         </div>        
     `;
 
@@ -19,9 +19,9 @@ for(i=0; i<5;i++){
     construir();
 }
 
-// function focar(){
-//    containerCard.children[2].classList.add('focar');
-// }
+function focar(){
+   containerCard.children[2].firstElementChild.classList.toggle('focar')
+}
 
 function acharElementos(){
     let cardPrevious = containerCard.children[2].previousElementSibling;
@@ -49,6 +49,8 @@ function aparecer(){
 
 function moverNext(){
 
+    focar();
+
     acharElementos();
 
     const primeElem = containerCard.firstElementChild;
@@ -56,10 +58,12 @@ function moverNext(){
     containerCard.appendChild(primeElem)
     sumir();
     aparecer();
-    // focar();
+    focar();
 }
 
 function moverPrev(){
+
+    focar();
 
     acharElementos();
 
@@ -69,11 +73,11 @@ function moverPrev(){
     containerCard.insertBefore(lastElem,primeElem);
     aparecer();
     sumir();
-    // focar()
+    focar()
 }
 btnPrev.addEventListener('click', moverPrev)
 
 btnNext.addEventListener('click',moverNext)
 
-// focar();
+focar();
 sumir();
