@@ -1,7 +1,46 @@
 * {box-sizing:border-box}
 
-img{
+@media only screen and (max-width: 480px) {
+  .prev, .next,.text {font-size: 11px};
+  .ing{
+    height: 150px !important;
+  }
+  .dot{
+    width: 5px !important;
+    height: 5px !important;
+  }
+  
+}
+
+
+@media only screen and (min-width: 481px) {
+  .ing{
+    height: 200px !important;
+   
+  }
+  .dot{
+    width: 9px !important;
+    height: 9px !important;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  .ing{
+    height: 300px !important;
+   
+  }
+  .dot{
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+}
+
+.ing{
   vertical-align: middle;
+  height: 300px;
+  width: 100%;
 }
 
 .slide{

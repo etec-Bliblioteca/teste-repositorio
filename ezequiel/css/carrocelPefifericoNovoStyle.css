@@ -68,15 +68,18 @@ html,body{
 .btnPrev{
     margin-right: 10px;
 }
+
 .btnNext{
     margin-left: 10px;
 }
+
 .btnCarrocel{
     border: none;
     background-color: transparent;
     width: 35px;
     height: 35px;
 }
+
 .btnCarrocel img{
     transition: 0.3s ease-in-out;
     width: 25px;
