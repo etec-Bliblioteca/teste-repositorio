@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* exemplo de como vai ficar o main */
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+}
+
+.sessao-aceitar-login{
+    margin: 10px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(184, 181, 181, 0.305);
+
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.sessao-aceitar-login .informacao{
+    margin: 20px;
+}
+
+/* estilo do botão */
+.area_button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.area_button button{
+    border: none;
+    width: 50%;
+}
+
+.btn_aceitar{
+    background-color: rgb(10, 218, 10);
+    border-bottom-left-radius: 10px;
+}
+
+.btn_recusar{
+    background-color: rgb(255, 55, 55);
+    border-bottom-right-radius: 10px;
+
+}
+
+.area_button button:active{
+    box-shadow: inset 0 0 16px 2px rgba(0, 0, 0, 0.173);
+}

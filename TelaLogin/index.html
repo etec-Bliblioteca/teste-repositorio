@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longin</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="Style_tela_login.css">
 </head>
 <body>
     <main>
         <section>
+            <!-- logo biblioteca etec -->
+            <div class="logo"></div>
             <form action="">
 
                 <div class="campo_input">
+                    <!-- nome usuário -->
                     <input type="text" placeholder="Nome">
-                    <input type="email" placeholder="Email">
+                    <!-- rm do aluno -->
                     <input type="number" placeholder="RM">
+                    <div id="turma">
+                        <!-- Série em que está agora -->
+                        <select name="serie" id="serie">
+                            <option value="1">1º</option>
+                            <option value="2">2º</option>
+                            <option value="3">3º</option>
+                        </select>
+                        <!-- Curso em que estuda -->
+                        <select name="curso" id="curso">
+                            <option value="info">Informática</option>
+                            <option value="adm">Administração</option>
+                            <option value="log">Logística</option>
+                            <option value="mark">Marketing</option>
+                        </select>
+                        <!-- Selecionar o periodo em que estuda -->
+                        <select name="periodo" id="periodo">
+                            <option value="manha">Manhã</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noite">Noite</option>
+                        </select>
+                    </div>
+                    <!-- email de preferencia -->
+                    <input type="email" placeholder="Email">
+                    <!-- definir senha -->
                     <input type="number" placeholder="senha">
+                    <input type="number" placeholder="Confirmar senha">
                 </div>
 
                 <div id="campo_button">
-                    <button type="submit">Entrar</button>
+                    <button type="submit">Registrar</button>
                     <button type="reset">Cancelar</button>
                 </div>
             </form>
         </section>
     </main>
+    <script src="Script_tela_login.js"></script>
 </body>
 </html>
