@@ -1,9 +1,12 @@
+
 const containerCard = document.querySelector('#cards');
-const btnPrev = document.querySelector('.btnPrev');
-const btnNext = document.querySelector('.btnNext');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
 const card = [...document.querySelectorAll('.card')];
 
 id=1;
+
+
 
 function construir() {
     containerCard.innerHTML += `
@@ -75,9 +78,34 @@ function moverPrev(){
     sumir();
     focar()
 }
-btnPrev.addEventListener('click', moverPrev)
+btnPrev.addEventListener('click', moverPrev);
 
-btnNext.addEventListener('click',moverNext)
+btnPrev.addEventListener('mouseover',()=>{
+    let img = btnPrev.firstElementChild;
+    img.src = 'icones/seta-esquerda-colorida.png'
+});
+
+btnPrev.addEventListener('mouseleave',()=>{
+    let img = btnPrev.firstElementChild;
+    img.src = 'icones/seta-esqueda.png'
+});
+
+btnNext.addEventListener('click',moverNext);
+
+btnNext.addEventListener('mouseover',()=>{
+    let img = btnNext.firstElementChild;
+    img.src = 'icones/seta-direita-colorida.png'
+});
+
+btnNext.addEventListener('mouseleave',()=>{
+    let img = btnNext.firstElementChild;
+    img.src = 'icones/seta-direita.png'
+});
+
+let intervalo = setInterval(()=>{
+    moverNext();
+},3000);
 
 focar();
 sumir();
+
