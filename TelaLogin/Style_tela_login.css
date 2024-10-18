@@ -44,24 +44,29 @@ form{
     flex-direction: column;
 }
 
+.campo_input div{
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
 .input{
     text-decoration: none;
-    height: 40px;
+    width: 90%;
     border: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    margin: 8px 10px;
 
     background-color: transparent;
+
+    font-size: 24px;
 }
 
 label{
-    margin: 8px 10px;
+    color: rgba(0, 0, 0, 0.6);
+    position: absolute;
 }
 
-label::before{
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background-color: black;
+.subir{
+    transition: transform 0.3s ease-in-out;
+    transform: translatey(-24px);
 }
