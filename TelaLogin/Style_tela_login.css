@@ -4,6 +4,7 @@
 }
 
 html,body,main{
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     height: 100vh;
 }
@@ -17,7 +18,7 @@ main{
 section{
     width: 350px;
     height: 650px;
-    background-color: rgb(158, 155, 155);
+    background-color: rgb(235, 235, 235);
 
     display: grid;
     grid-template-rows: 1fr 3fr;
@@ -51,22 +52,62 @@ form{
 }
 
 .input{
+    outline: none;
     text-decoration: none;
+    background-color: transparent;
     width: 90%;
+
     border: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 
-    background-color: transparent;
-
-    font-size: 24px;
+    padding-left: 2px;
+    font-size: 15px;
 }
 
 label{
+    pointer-events: none;
     color: rgba(0, 0, 0, 0.6);
     position: absolute;
 }
 
+#campo_button{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ativo{
+    border-color: black;
+}
+
 .subir{
+    color: black;
     transition: transform 0.3s ease-in-out;
-    transform: translatey(-24px);
+    transform: translatey(-20px);
+}
+
+.descer{
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+    transform: translatey(0px);
+}
+
+.ok{
+    color: rgb(14, 141, 14);
+    border-color: rgb(24, 219, 24);
+}
+
+.errado{
+    color: rgb(173, 36, 36);
+    border-color: rgb(210, 50, 50);
+}
+
+.noite{
+    background-color: rgba(0, 0, 0, 0.732);
+    color: rgba(255, 255, 255, 0.807);
+}
+.noite-fundo{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.noite-fundo-2{
+    background-color: rgb(158, 155, 155);
 }
